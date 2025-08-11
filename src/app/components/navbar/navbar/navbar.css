@@ -1,0 +1,62 @@
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Navbar fija arriba */
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff6c;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  /* Contenedor SVG centrado */
+  .navbar svg {
+    height: 40px;
+    width: 40px;
+    fill: rgb(0, 0, 0);
+  }
+
+  /* Solo para demo: contenido para hacer scroll */
+  .content {
+    height: 2000px;
+    background: linear-gradient(white, lightgray);
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  /* Header */
+.title { 
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800; 
+  margin-bottom: 1.5rem; 
+  font-size: 2.5rem; 
+  letter-spacing: 0.2em; 
+  text-transform: uppercase;
+  background: linear-gradient(270deg, orange, orangered, orange, orangered);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  animation: gradientMove 12s ease infinite;
+}
+
+.subtitle {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: greenyellow;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}

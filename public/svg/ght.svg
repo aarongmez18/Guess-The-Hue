@@ -1,0 +1,22 @@
+<svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" >
+  <rect width="200" height="120" rx="20" ry="20" fill="#000"/>
+  <g font-family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif" font-weight="bold" font-size="72" fill="#FF5E3A">
+    <text x="20" y="85" style="filter: url(#glitch)">GtH</text>
+    <text x="20" y="85" fill="#FF8A65" opacity="0.7" style="filter: url(#glitch2)">GtH</text>
+  </g>
+  <defs>
+    <filter id="glitch" x="0" y="0" width="200%" height="200%" >
+      <feOffset in="SourceGraphic" dx="2" dy="0" result="off1" />
+      <feOffset in="SourceGraphic" dx="-2" dy="0" result="off2" />
+      <feBlend in="off1" in2="off2" mode="screen" result="blend1" />
+      <feComposite in="blend1" in2="SourceAlpha" operator="in" result="comp1"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+      <feDisplacementMap in="comp1" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    <filter id="glitch2" x="0" y="0" width="200%" height="200%" >
+      <feOffset in="SourceGraphic" dx="-3" dy="0" result="off1" />
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
+      <feDisplacementMap in="off1" in2="noise" scale="15" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </defs>
+</svg>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GuesstheHue
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.2.
@@ -57,3 +58,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# Guess-The-Hue
+Juego web para adivinar colores basado en Angular. Tienes 5 intentos para acertar el color mostrado.
+>>>>>>> b2dc40fd1092ca6112d7645128001c14539b6d54

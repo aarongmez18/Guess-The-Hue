@@ -1,0 +1,48 @@
+<app-snackbar #snackbar></app-snackbar>
+<section class="d-flex flex-row justify-content-end">
+<div class="level-display">LEVEL {{ nivel }}</div>
+<div class="level-display">SCORE {{ score }}</div>
+</section>
+
+<div class="forms" *ngFor="let fila of inputs; let row = index">
+  <div class="row-group">
+    <input
+      *ngFor="let letra of fila; let i = index; trackBy: trackByIndex"
+      #inputRef
+      type="text"
+      maxlength="1"
+      inputmode="text"
+      autocomplete="off"
+      [(ngModel)]="inputs[row][i]"
+      (ngModelChange)="onModelChange($event, row, i)"
+      [disabled]="filaActiva !== row"
+      [ngClass]="coloresFila[row][i]"
+      class="letter-box"
+      [attr.aria-label]="'Letra ' + (i + 1) + ' fila ' + (row + 1)"
+    />
+
+    <button
+      (click)="intentar(row)"
+      [disabled]="filaActiva !== row "
+    >
+      Intentar
+    </button>
+  </div>
+</div>
+
+      <!-- Color objetivo -->
+      <div class="mb-4 d-flex flex-column justify-content-center p-3 ">
+        <div class="w-100 " style="height: 8rem; border-radius: 0.5rem; border: 2px solid black;"
+             [style.background]="randomColorHex"
+             class="d-flex align-items-center justify-content-center position-relative container-color-objetivo">
+        </div>
+        <div class="d-flex align-items-center justify-content-center position-relative">
+          <button
+            class="next-level-btn text-center d-flex align-items-center justify-content-center position-relative"
+            (click)="nextLevel()"
+            [disabled]="!nextLevelButtonEnable"
+          >
+          Next level
+          </button>
+        </div>
+      </div>

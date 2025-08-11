@@ -1,0 +1,17 @@
+.snackbar {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      opacity: 0.9;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 9999;
+    }
+    .snackbar.error {
+      background-color: #e74c3c;
+    }
