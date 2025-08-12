@@ -125,11 +125,12 @@ body {
 }
 
 /* Media queries para móviles y tablets */
-@media (max-width: 768px) {
+@media (max-width: 884px) {
   .app-container {
     margin: 20px auto;
     padding: 15px 20px;
-    max-width: 95%;
+    max-width: 100%;
+    width: 90%;
   }
   
   .text {
@@ -147,6 +148,8 @@ body {
 @media (max-width: 480px) {
   .app-container {
     padding: 10px 15px;
+    max-width: 100%;
+    width: 90%;
   }
 
   .text {
