@@ -11,13 +11,12 @@ body {
   align-items: flex-start;
   min-height: 100vh;
   color: #333;
-  
-  
-/* espacio entre inputs */
 }
+
 .gap1 {
-  gap: 1rem; 
+  gap: 1rem;
 }
+
 /* Contenedor centrado */
 .app-container {
   display: flex;
@@ -30,50 +29,36 @@ body {
   padding: 20px 30px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-  max-width: 50%;
-  
-  min-height: 100%;        
+  max-width: 60%; /* más flexible */
+  width: 90%;
+  min-height: 100%;
 }
-
-
-
 
 @keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-
-.container-color-objetivo{
-
+.container-color-objetivo {
   border: 4px black solid;
   max-width: 1000px;
+  width: 100%;
 }
 
-.text{
+.text {
   font-size: small;
   font-weight: 800;
- text-transform: uppercase;
- letter-spacing: 0.05em;
- text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
 }
-
 
 /* Message text */
 .message {
   margin-bottom: 1rem;
   font-weight: 600;
 }
-
-
-
 
 /* Guess history */
 .guess-history {
@@ -137,4 +122,46 @@ body {
 
 .reset-btn:hover {
   background-color: #a71d2a;
+}
+
+/* Media queries para móviles y tablets */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 20px auto;
+    padding: 15px 20px;
+    max-width: 95%;
+  }
+  
+  .text {
+    font-size: 0.85rem;
+  }
+
+  .letter {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px 15px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+
+  .letter {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.8rem;
+  }
+
+  .reset-btn {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
 }
